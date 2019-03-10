@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="saludoImpl" class="com.cursospring.beans.SaludoImpl">
+      <property name="valor" value="Hola mundo!"/>
+</bean>
+
+<bean id="alumno" class="com.cursospring.beans.Alumno" >
+      <property name="saludo" ref="saludoImpl"/>
+</bean>
+ 
+ <!-- TODO Configurar el scope a propotype
+<bean id="alumno" class="com.cursospring.beans.Alumno" scope="prototype">
+      <property name="saludo" ref="saludoImpl"/>
+</bean>
+-->
+ 
+</beans>
